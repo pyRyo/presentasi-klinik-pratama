@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Proposal Bisnis: Pendirian Klinik Pratama</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏥</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #374151; /* gray-700 */
+        }
+        /* Refined theme colors */
+        .theme-primary { color: #007A70; }
+        .bg-theme-primary { background-color: #007A70; }
+        .bg-theme-secondary { background-color: #009688; }
+        .border-theme-primary { border-color: #007A70; }
+        .accent-color { color: #FFB74D; }
+
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .slide:last-child {
+            border-bottom: none;
+        }
+        .slide.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .chart-bar {
+            transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .pie-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: conic-gradient(#009688 0% 78.57%, #B2DFDB 78.57% 100%);
+            transition: transform 0.5s ease;
+        }
+        .pie-chart:hover {
+            transform: scale(1.05);
+        }
+        #toTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px;
+            border-radius: 50%;
+            transition: opacity 0.3s, background-color 0.3s;
+        }
+        #toTopBtn:hover {
+            background-color: #005a52;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#pendahuluan" class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-theme-primary" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2.5a.5.5 0 01.5-.5h3a.5.5 0 01.5.5V17a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+                <span class="ml-2 text-xl font-bold text-gray-800">Klinik Pratama</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#analisis" class="text-gray-600 hover:text-theme-primary transition duration-300 font-semibold">Pasar</a>
+                <a href="#layanan" class="text-gray-600 hover:text-theme-primary transition duration-300 font-semibold">Layanan</a>
+                <a href="#keuangan" class="text-gray-600 hover:text-theme-primary transition duration-300 font-semibold">Keuangan</a>
+                <a href="#penutup" class="text-gray-600 hover:text-theme-primary transition duration-300 font-semibold">Sinergi</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Slide 1: Judul -->
+        <section id="pendahuluan" class="slide bg-white">
+            <div class="text-center">
+                <p class="text-lg md:text-xl text-theme-primary font-bold mb-2">PROPOSAL PENDIRIAN KLINIK PRATAMA</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 mb-4 tracking-tight">Solusi Kesehatan Terpadu</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600">Untuk Korporat dan Komunitas Pendidikan di Kota Bandung sebagai bagian strategis dari Ekosistem Melinda Group.</p>
+                <div class="mt-12 animate-bounce">
+                    <a href="#visi-misi" class="text-theme-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Visi & Misi -->
+        <section id="visi-misi" class="slide">
+            <div class="container mx-auto text-center">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-theme-primary">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-theme-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                            Visi
+                        </h3>
+                        <p class="text-lg text-gray-600">Menjadi klinik pratama pilihan di Kota Bandung yang unggul dalam layanan kesehatan preventif untuk korporat dan menjadi mitra terpercaya bagi komunitas.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-theme-primary">
+                         <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-theme-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                            </svg>
+                            Misi
+                        </h3>
+                        <ul class="text-lg text-gray-600 text-left list-none space-y-2">
+                           <li class="flex items-start"><span class="text-theme-primary mr-2">✔</span>MCU Korporat (PJK3).</li>
+                           <li class="flex items-start"><span class="text-theme-primary mr-2">✔</span>Pusat Layanan Gigi Terpadu.</li>
+                           <li class="flex items-start"><span class="text-theme-primary mr-2">✔</span>Kemitraan UKS/UKGS.</li>
+                           <li class="flex items-start"><span class="text-theme-primary mr-2">✔</span>Pelayanan Umum Profesional.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Analisis Pasar -->
+        <section id="analisis" class="slide bg-white">
+            <div class="container mx-auto text-center">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-10">Analisis Pasar & Peluang</h2>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-md border-t-4 border-theme-primary">
+                        <h3 class="font-bold text-xl mb-4 text-gray-700">Demografi Bandung</h3>
+                         <div class="flex items-center justify-center space-x-4">
+                            <div class="pie-chart flex items-center justify-center">
+                                <span class="text-white font-bold text-2xl">78%</span>
+                            </div>
+                            <div>
+                                <p class="text-left"><strong class="text-2xl text-theme-primary">1,9jt+</strong><br>Usia Produktif</p>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Lokasi target di Sukajadi padat, menjadi pusat ekonomi dan pendidikan.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-md border-t-4 border-theme-primary">
+                        <h3 class="font-bold text-xl mb-4 text-gray-700">Profil Kesehatan</h3>
+                        <p class="text-sm text-gray-600 mb-4">PTM dominan, menandakan urgensi deteksi dini melalui MCU.</p>
+                        <div class="space-y-3 text-left text-sm">
+                            <div class="w-full bg-slate-200 rounded-full"><div id="bar1" class="chart-bar bg-theme-secondary text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style="width: 0%" data-width="85%">Kardiovaskular 13.73%</div></div>
+                            <div class="w-full bg-slate-200 rounded-full"><div id="bar2" class="chart-bar bg-theme-secondary text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style="width: 0%" data-width="60%">Stroke 8.24%</div></div>
+                            <div class="w-full bg-slate-200 rounded-full"><div id="bar3" class="chart-bar bg-theme-secondary text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style="width: 0%" data-width="45%">Lainnya (ISPA, TBC)</div></div>
+                        </div>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-xl shadow-md border-t-4 border-theme-primary md:col-span-2 lg:col-span-1">
+                        <h3 class="font-bold text-xl mb-4 text-gray-700">Celah Kompetitif</h3>
+                        <p class="text-gray-600">Belum ada pemain yang fokus pada target <span class="font-bold text-theme-primary">spesifik</span> kami.</p>
+                        <div class="mt-4 text-left p-4 bg-teal-50 rounded-lg">
+                             <ul class="list-disc list-inside text-gray-700 font-semibold">
+                                <li>MCU korporat (PJK3)</li>
+                                <li>UKS/UKGS sekolah swasta</li>
+                            </ul>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Layanan Unggulan -->
+        <section id="layanan" class="slide">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Layanan Unggulan</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div class="p-8">
+                            <div class="flex items-center text-theme-primary mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" /></svg><h3 class="text-2xl font-bold ml-3 text-gray-800">MCU Korporat (PJK3)</h3></div>
+                            <p class="mb-4 text-gray-600">Solusi B2B fleksibel untuk mendukung produktivitas.</p>
+                            <div class="p-4 bg-slate-100 rounded-lg"><h4 class="font-bold text-gray-800">On-site:</h4><p class="text-sm">Efisiensi waktu & partisipasi tinggi (&gt;95%).</p></div>
+                            <div class="p-4 bg-slate-100 rounded-lg mt-3"><h4 class="font-bold text-gray-800">Walk-in:</h4><p class="text-sm">Fleksibilitas jadwal & fasilitas lengkap.</p></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                        <div class="p-8">
+                            <div class="flex items-center text-theme-primary mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><h3 class="text-2xl font-bold ml-3 text-gray-800">Gigi & UKS/UKGS</h3></div>
+                            <p class="mb-4 text-gray-600">Strategi akuisisi pasar jangka panjang yang loyal.</p>
+                            <div class="p-4 bg-slate-100 rounded-lg"><h4 class="font-bold text-gray-800">Pasar Luas:</h4><p class="text-sm">Ratusan sekolah swasta belum punya program gigi terstruktur.</p></div>
+                            <div class="p-4 bg-slate-100 rounded-lg mt-3"><h4 class="font-bold text-gray-800">Model Kerjasama:</h4><p class="text-sm">Edukasi, screening, preventif, dan rujukan.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Proyeksi Keuangan -->
+        <section id="keuangan" class="slide bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Proyeksi Keuangan & Kelayakan</h2>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-theme-primary text-white p-6 rounded-xl shadow-lg"><p class="text-lg">Kebutuhan Dana</p><p class="text-4xl font-bold" data-count="1.78">0</p><p class="text-sm opacity-80">Miliar Rupiah</p></div>
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-lg"><p class="text-lg text-gray-600">BEP Bulanan</p><p class="text-4xl font-bold text-theme-primary" data-count="196">0</p><p class="text-sm text-gray-500">Juta Rupiah</p></div>
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-lg"><p class="text-lg text-gray-600">Payback Period</p><p class="text-4xl font-bold text-theme-primary" data-count="4">0</p><p class="text-sm text-gray-500">Tahun (Estimasi)</p></div>
+                     <div class="bg-slate-50 p-6 rounded-xl shadow-lg"><p class="text-lg text-gray-600">IRR</p><p class="text-4xl font-bold text-theme-primary" data-count="25">0</p><p class="text-sm text-gray-500">% (Sangat Layak)</p></div>
+                </div>
+                <div class="mt-10 bg-white p-6 rounded-xl shadow-lg overflow-x-auto"><h3 class="font-bold text-xl mb-4 text-center">Proyeksi Laba/(Rugi) 12 Bulan Pertama (dalam Juta Rp)</h3>
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-slate-100"><tr><th class="py-3 px-6">Bulan</th><th class="py-3 px-6">Pendapatan</th><th class="py-3 px-6">Biaya</th><th class="py-3 px-6">Laba / (Rugi)</th></tr></thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-slate-50"><td class="py-4 px-6 font-medium">1-3</td><td>0</td><td>372.9</td><td class="text-red-500 font-semibold">(372.9)</td></tr>
+                            <tr class="bg-slate-50 border-b hover:bg-slate-100"><td class="py-4 px-6 font-medium">4</td><td>148.8</td><td>178.6</td><td class="text-red-500 font-semibold">(29.8)</td></tr>
+                            <tr class="bg-white border-b hover:bg-slate-50"><td class="py-4 px-6 font-medium">7</td><td>198.0</td><td>194.8</td><td class="text-green-600 font-semibold">3.2</td></tr>
+                            <tr class="bg-slate-50 border-b hover:bg-slate-100"><td class="py-4 px-6 font-medium">12</td><td>319.0</td><td>222.6</td><td class="text-green-600 font-semibold">96.4</td></tr>
+                            <tr class="bg-slate-200 text-gray-800 font-bold"><td class="py-4 px-6">Total Tahun 1</td><td>2,019.5</td><td>2,176.8</td><td class="text-red-500">(157.3)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Penutup -->
+        <section id="penutup" class="slide">
+            <div class="container mx-auto text-center max-w-4xl">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Investasi Strategis untuk Pertumbuhan</h2>
+                 <p class="text-lg text-gray-600 mb-8">Klinik ini berfungsi sebagai <span class="font-bold text-theme-primary">'feeder'</span> vital yang memperkuat ekosistem Melinda Group, menciptakan nilai jangka panjang yang signifikan.</p>
+                 <div class="p-8 bg-white rounded-xl shadow-xl border-l-8 border-theme-primary text-left">
+                    <ul class="space-y-4 text-gray-700">
+                       <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-theme-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg><div><b class="text-gray-800">Sistem Rujukan Terstruktur:</b> Mengarahkan pasien spesialistik ke RS Melinda Group.</div></li>
+                       <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-theme-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg><div><b class="text-gray-800">Perluasan Jangkauan Pasar:</b> Menjangkau segmen korporat dan sekolah.</div></li>
+                       <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-theme-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg><div><b class="text-gray-800">Penguatan Citra Merek Terpadu:</b> Melengkapi layanan dari hulu ke hilir.</div></li>
+                    </ul>
+                 </div>
+                 <div class="mt-12">
+                    <p class="text-xl font-semibold text-gray-800">Terima Kasih</p>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="toTopBtn" onclick="scrollToTop()" class="bg-theme-primary text-white shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Intersection Observer for slide animations & charts
+            const slides = document.querySelectorAll('.slide');
+            const observerOptions = { root: null, threshold: 0.2, rootMargin: '0px' };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        if (entry.target.id === 'analisis') {
+                            ['bar1', 'bar2', 'bar3'].forEach(id => {
+                                const el = document.getElementById(id);
+                                if (el) el.style.width = el.getAttribute('data-width');
+                            });
+                        }
+
+                        if (entry.target.id === 'keuangan') {
+                            document.querySelectorAll('[data-count]').forEach(counter => {
+                                animateCountUp(counter);
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            slides.forEach(slide => observer.observe(slide));
+
+            // Count-up animation function
+            function animateCountUp(el) {
+                let frame = 0;
+                const target = parseFloat(el.getAttribute('data-count'));
+                const duration = 2000;
+                const countTo = Math.round(target * 100) / 100;
+                const counter = setInterval(() => {
+                    frame++;
+                    const progress = frame / (duration / 10);
+                    const current = countTo * (progress / (duration / 10));
+                    
+                    if (target % 1 !== 0) { // Check if float
+                         el.innerText = current.toFixed(2).replace('.', ',');
+                    } else {
+                         el.innerText = Math.round(current);
+                    }
+
+                    if (frame === (duration / 10)) {
+                        clearInterval(counter);
+                        if (target % 1 !== 0) {
+                             el.innerText = target.toFixed(2).replace('.', ',');
+                        } else {
+                             el.innerText = target;
+                        }
+                    }
+                }, 10);
+                el.removeAttribute('data-count'); // Prevent re-animating
+            }
+
+            // Scroll to top button logic
+            const toTopBtn = document.getElementById('toTopBtn');
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    toTopBtn.style.display = "block";
+                } else {
+                    toTopBtn.style.display = "none";
+                }
+            };
+        });
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
